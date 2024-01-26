@@ -8,13 +8,12 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const [isSignIn, setisSignIn] = useState(true);
   const [ErrorMessage, setErrorMessage] = useState(null);
   const email = useRef(null);
@@ -39,8 +38,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: username.current?.value,
-            photoURL:
-              "https://avatars.githubusercontent.com/u/88899058?s=96&v=4",
+            photoURL: USER_AVATAR,
           });
         })
         .then(() => {
@@ -53,13 +51,9 @@ const Login = () => {
               photoURL: photoURL,
             })
           );
-          navigate("/browse");
         })
         .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          console.log(errorCode, errorMessage);
-          setErrorMessage(errorCode + errorMessage);
+          setErrorMessage(error.message);
         });
     } else {
       //Sign In Logic
@@ -71,8 +65,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
-          navigate("/browse");
         })
         .catch((error) => {
           setErrorMessage(error.message);
