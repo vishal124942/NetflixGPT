@@ -27,7 +27,7 @@
 - Update Store with Trailer Video Data
 - Embedded the Youtube video and make it autoplay and mute/unmute both
 - Tailwind classes to make Main Container look awesome
-  #Features
+- #Features
 
 - Login/Sign Up
   - Sign In /Sign up Form
