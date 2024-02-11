@@ -19,3 +19,6 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "Spanish", name: "Spanish" },
   { identifier: "French", name: "French" },
 ];
+export const YOUTUBE_API_KEY = "AIzaSyCH1uXooIrA5MLPYkGIhWcdECEsbegSBdE";
+export const SEARCHED_MOVIES =
+  "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=";
