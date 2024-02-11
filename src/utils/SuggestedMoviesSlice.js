@@ -9,7 +9,11 @@ const SuggestedMovies = createSlice({
     AddSuggestedMovies: (state, action) => {
       state.showSuggestedMovies.push(...action.payload);
     },
+    RemoveSuggestedMovies: (state) => {
+      state.showSuggestedMovies = [];
+    },
   },
 });
-export const { AddSuggestedMovies } = SuggestedMovies.actions;
+export const { AddSuggestedMovies, RemoveSuggestedMovies } =
+  SuggestedMovies.actions;
 export default SuggestedMovies.reducer;

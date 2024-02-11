@@ -5,12 +5,14 @@ import SearchMovieSuggestions from "./SearchMovieSuggestions";
 
 const GptSearch = () => {
   return (
-    <div>
+    <div className="overflow-y-scroll  w-screen h-screen ">
       <div className="absolute -z-10">
-        <img src={BG_URL} alt="Bg-logo" />
+        <img className=" w-screen h-screen" src={BG_URL} alt="Bg-logo" />
       </div>
-      <SearchBar />
-      <SearchMovieSuggestions />
+      <div className="space-y-3">
+        <SearchBar />
+        <SearchMovieSuggestions />
+      </div>
     </div>
   );
 };
