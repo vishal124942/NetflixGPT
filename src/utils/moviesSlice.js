@@ -20,7 +20,10 @@ const movieSlice = createSlice({
     },
     addTrailerVideo: (state, action) => {
       state.trailerVideo = action.payload;
-    }, // Add a comma here
+    },
+    addMovieTeaser: (state, action) => {
+      state.movieTeaser = action.payload;
+    },
   },
 });
 export const {
@@ -29,5 +32,6 @@ export const {
   addPopularMovies,
   addUpcomingMovies,
   addTrendingMovies,
+  addMovieTeaser,
 } = movieSlice.actions;
 export default movieSlice.reducer;

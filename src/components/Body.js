@@ -16,7 +16,7 @@ const Body = () => {
       element: <Browse />,
     },
     {
-      path: "/watch/:key",
+      path: "/watch",
       element: <WatchPage />,
     },
     {
