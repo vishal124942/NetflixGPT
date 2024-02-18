@@ -71,22 +71,3 @@ export const About = [
   },
 ];
 
-// {/* <div className="lg:w-[40%] mt-4 lg:mt-0 lg:ml-4 ">
-//           {filterMovieDetail?.map((datam) => (
-//             <div key={datam?.id}>
-//               <h1 className="text-2xl lg:text-3xl font-bold text-red-600 ">
-//                 {datam?.title}
-//               </h1>
-//               <p className="text-sm lg:text-base my-3 text-white">
-//                 {datam?.overview}
-//               </p>
-//               <p className="text-sm lg:text-base my-4 text-white">
-//                 Language: {datam?.original_language}
-//               </p>
-//               <p className="text-sm lg:text-base my-4 text-white">
-//                 Video Rating: {datam?.vote_average}
-//               </p>
-//               <p className="text-sm lg:text-base my-4 text-white">
-//                 Release Date: {datam?.release_date}
-//               </p>
-//             </div> */}
