@@ -7,7 +7,11 @@ const GptSearch = () => {
   return (
     <div className="overflow-y-scroll  w-screen h-screen ">
       <div className="absolute -z-10">
-        <img className=" w-screen h-screen" src={BG_URL} alt="Bg-logo" />
+        <img
+          className="w-screen h-screen object-cover"
+          src={BG_URL}
+          alt="Bg-logo"
+        />
       </div>
       <div className="space-y-3">
         <SearchBar />

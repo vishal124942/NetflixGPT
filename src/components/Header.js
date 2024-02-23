@@ -1,7 +1,7 @@
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import React, { useEffect } from "react";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
@@ -50,10 +50,13 @@ const Header = () => {
   };
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   return (
-    <div className=" absolute flex justify-between w-screen px-8 py-2 bg-gradient-to-b from-black z-10">
-      <img className="w-44" alt="netflix logo" src={LOGO} />
+    <div className=" Header absolute w-screen px-4 md:px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between">
+      <Link to="/browse">
+        <img className="w-32 md:w-44 mx-auto md:mx-0" src={LOGO} alt="logo" />
+      </Link>
+
       {user && (
-        <div className="flex p-2 ">
+        <div className=" header-btns flex p-2 ">
           {showGptSearch && (
             <select
               className="p-2 m-2 bg-gray-900 text-white rounded-md"
@@ -68,18 +71,21 @@ const Header = () => {
           )}
           <button
             onClick={() => RouteToAboutProject()}
-            className="py-2  rounded-md px-4 mx-4 my-2 bg-purple-800 text-white"
+            className=" first-btn py-2  rounded-md px-4 mx-4 my-2 bg-purple-800 text-white"
           >
             About Project
           </button>
           <button
             onClick={handleGptSearchClick}
-            className="py-2  rounded-md px-4 mx-4 my-2 bg-purple-800 text-white"
+            className="second-btn py-2  rounded-md px-4 mx-4 my-2 bg-purple-800 text-white"
           >
             {showGptSearch ? "Home Page" : " Search"}
           </button>
           <img className="w-12 h-12 mr-3" src={user?.photoURL} alt="userlogo" />
-          <button onClick={handleSignOut} className="font-bold text-white">
+          <button
+            onClick={handleSignOut}
+            className="third-btn font-bold text-white"
+          >
             (Sign Out)
           </button>
         </div>

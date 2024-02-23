@@ -32,9 +32,9 @@ const SearchBar = () => {
   };
   const langkey = useSelector((store) => store.config.lang);
   return (
-    <div className="pt-20 flex justify-center  ">
+    <div className=" search pt-20  flex justify-center  ">
       <form
-        className="w-1/2  bg-black grid grid-cols-12"
+        className=" searchbar lg:w-1/2  bg-black grid grid-cols-12"
         onSubmit={(e) => e.preventDefault()}
       >
         <input
@@ -50,7 +50,7 @@ const SearchBar = () => {
               setsearchText("");
               dispatch(RemoveSuggestedMovies());
             }}
-            className="h-6 w-6 cursor-pointer absolute translate-x-[480px]  translate-y-8 z-10"
+            className="cross h-6 w-6 cursor-pointer absolute lg:translate-x-[480px]  translate-y-8 z-10"
             src={CLOSE}
             alt=""
           />

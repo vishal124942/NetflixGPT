@@ -10,14 +10,14 @@ const AboutProject = () => {
   };
   return (
     <div className="flex flex-col justify-items-start space-y-20  bg-slate-100">
-      <div className="flex justify-between">
-        <h1 className="font-bold text-4xl translate-x-36 translate-y-8">
+      <div className="About-heading flex justify-between">
+        <h1 className="font-bold text-4xl lg:translate-x-36 lg:translate-y-8">
           Welcome to{" "}
           <strong className="text-red-600 font-medium"> Netflix GPT</strong>
         </h1>
         <button
           onClick={backtobrowse}
-          className="py-2  rounded-md px-4 mx-4 my-2 translate-y-7 -translate-x-28 bg-purple-800 text-white"
+          className="py-2  rounded-md px-4 mx-4 my-2 lg:translate-y-7 lg:-translate-x-28 bg-purple-800 text-white"
         >
           Back
         </button>

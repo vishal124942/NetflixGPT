@@ -12,18 +12,20 @@ function WatchPage() {
   useMoviePage(teaserid);
   return (
     <div className=" w-screen h-screen bg-black">
-      <div className=" absolute flex justify-between items-center w-screen px-8 py-2 bg-gradient-to-b from-black z-10">
-        <img className="w-44" alt="netflix logo" src={LOGO} />
-        <div className="flex  space-x-4">
+      <div className="watch absolute flex justify-between items-center w-screen px-8 py-2 bg-gradient-to-b from-black z-10">
+        <Link to={"/browse"}>
+          <img className="lg:w-44" alt="netflix logo" src={LOGO} />
+        </Link>
+        <div className="watch-btns flex  space-x-4">
           <Link
             to={"/aboutProject"}
-            className=" w-32 h-12 px-3 py-3 rounded-xl  bg-purple-800 text-white"
+            className="watch-about lg:w-32 lg:h-12 px-3 lg:py-3 rounded-xl  bg-purple-800 text-white"
           >
             About Project
           </Link>
           <Link
             to={"/"}
-            className=" w-24 h-12 px-3 py-3 rounded-xl  bg-purple-800 text-white"
+            className="watch-about lg:w-24 lg:h-12 px-3 lg:py-3 rounded-xl  bg-purple-800 text-white"
           >
             See More
           </Link>

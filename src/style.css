@@ -4,5 +4,97 @@
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: black;
-  
+}
+@media (min-width: 375px) and (max-width: 400px) {
+  /* .Browse {
+    display: flex;
+    flex-direction: column;
+  } */
+  .header-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-small;
+  }
+  .first-btn {
+    font-size: x-small;
+    width: 70px;
+  }
+  .MainContainer {
+    width: 100%;
+    height: screen;
+  }
+  .second-btn {
+    margin-left: 5px;
+  }
+  .SecondaryContainer {
+    transform: translateY(700px);
+  }
+  .VideoTitle {
+    transform: translateY(350px);
+    width: screen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .VideoTitle h1 {
+    font-size: 30px;
+  }
+  .VideoTitle p {
+    width: screen;
+    height: screen;
+    text-align: center;
+  }
+  .videotitle-btns {
+    transform: scale(0.8);
+    gap: 20px;
+  }
+  .more-info h1 {
+    font-size: 23px;
+  }
+  .play-btn {
+    width: 120px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .play-btn h1 {
+    font-size: 23px;
+  }
+  .videobackground {
+    width: screen;
+    transform: translateY(180px);
+  }
+  .About-heading h1 {
+    font-size: 25px;
+    transform: translate(60px, 60px);
+  }
+  .watch img {
+    width: 60%;
+  }
+  .watch-about {
+    width: auto;
+    height: auto;
+    font-size: small;
+    text-align: center;
+  }
+  .search {
+    transform: translateY(70px);
+  }
+  .searchbar {
+    display: flex;
+    margin-bottom: 4rem;
+  }
+  .cross {
+    transform: translate(190px, 32px);
+  }
+  .suggmovies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }

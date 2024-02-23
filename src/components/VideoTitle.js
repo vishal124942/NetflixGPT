@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 const VideoTitle = (props) => {
   return (
-    <div className="w-screen aspect-video pt-[20%] px-24 absolute text-white bg-gradient-to-r from-black">
-      <h1 className="text-6xl font-bold">{props.title}</h1>
-      <p className="py-6 text-lg  w-6/12">{props.overview}</p>
-      <div className=" flex items-center">
+    <div className="VideoTitle w-screen aspect-video pt-[20%] lg:px-20 absolute text-white bg-gradient-to-r from-black">
+      <h1 className="lg:text-6xl font-bold ">{props.title}</h1>
+      <p className="py-6 text-lg  lg:w-6/12">{props.overview}</p>
+      <div className="videotitle-btns flex items-center lg:text-xl ">
         <Link
           to={`/watch?v=${props?.id}`}
-          className=" flex items-center bg-white text-black p-4 px-12 text-xl hover:bg-opacity-80 rounded-md"
+          className="play-btn flex items-center bg-white text-black lg:p-4 lg:px-12  hover:bg-opacity-80 rounded-md"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +27,7 @@ const VideoTitle = (props) => {
         </Link>
         <Link
           to={`/watch?v=${props?.id}`}
-          className=" flex  items-center gap-x-2 mx-2 bg-slate-400 text-white p-4 px-12 text-xl bg-opacity-50 rounded-md"
+          className=" more-info flex  items-center gap-x-2 mx-2 bg-slate-400 text-white text-xl p-4 lg:px-12 bg-opacity-50 rounded-md"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

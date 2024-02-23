@@ -2,7 +2,7 @@ import React from "react";
 
 const SuggestedMovieCard = ({ movie }) => {
   return (
-    <div className="flex-flex-col  w-72 hover:scale-105 duration-150 cursor-pointer bg-black  ">
+    <div className="suggmovies flex-flex-col  lg:w-72 hover:scale-105 duration-150 cursor-pointer bg-black  ">
       <img
         className=" w-72 h-42 rounded-xl "
         src={movie?.snippet?.thumbnails?.high?.url}
