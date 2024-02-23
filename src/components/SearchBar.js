@@ -50,7 +50,7 @@ const SearchBar = () => {
               setsearchText("");
               dispatch(RemoveSuggestedMovies());
             }}
-            className="cross h-6 w-6 cursor-pointer absolute lg:translate-x-[480px]  translate-y-8 z-10"
+            className="cross h-6 w-6 cursor-pointer absolute lg:translate-x-[640px]  translate-y-8 z-10"
             src={CLOSE}
             alt=""
           />
