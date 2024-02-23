@@ -97,4 +97,8 @@
     align-items: center;
     text-align: center;
   }
+  .whole-search {
+    width: screen;
+    height: screen;
+  }
 }
