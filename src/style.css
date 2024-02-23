@@ -100,5 +100,6 @@
   .whole-search {
     width: screen;
     height: screen;
+    overflow-x: hidden;
   }
 }
